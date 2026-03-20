@@ -5,4 +5,40 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"/>
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/mtbHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/fcvContent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/green"
+        />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fcvContent"
+        android:name="com.example.myapplication.day"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/mtbHeader"
+        app:layout_constraintEnd_toEndOf="@+id/mtbHeader"
+        app:layout_constraintStart_toStartOf="@+id/mtbHeader"
+        app:layout_constraintTop_toTopOf="@+id/mtbHeader"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="25sp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
